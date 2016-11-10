@@ -5,5 +5,5 @@
 public static void main(String args){
 
 	System.out.println("tiantian xiang shang");
-	System.out.println("zuguo shi huayuan");
+	System.out.println("我们是祖国的花朵");
 }
