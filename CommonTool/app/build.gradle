@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "toast.test.android.bpyc.com.myapplication"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+    }
+}
+
+repositories {
+    maven {
+        url "https://repository.kaazing.com/maven/"
+    }
+}
+
+
+dependencies {
+    //compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    //compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.0'
+    //compile 'com.kaazing:enterprise.android.client.all:4.1.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+}
